@@ -1,0 +1,23 @@
+configOverrides:
+  config: |
+    APPLICATION_ROOT: '{{ applicationRoot }}'
+extraEnv:
+  APPLICATION_ROOT: '{{ applicationRoot }}'
+init:
+  adminUser:
+    email: '{{ adminEmail }}'
+    firstname: '{{ adminFirstName }}'
+    lastname: '{{ adminLastName }}'
+    password: '{{ adminPassword }}'
+    username: '{{ adminUsername }}'
+postgresql:
+  enabled: {{ postgresqlEnabled }}
+redis:
+  auth:
+    enabled: {{ redisAuthEnabled }}
+    password: '{{ redisAuthPassword }}'
+supersetNode:
+  connections:
+    db_host: '{{ dbHost }}'
+    db_pass: '{{ dbPassword }}'
+    redis_password: '{{ redisPassword }}'
